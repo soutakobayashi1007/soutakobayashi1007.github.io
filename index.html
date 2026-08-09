@@ -70,32 +70,30 @@
 <main>
 
 <header class="hero">
-  <h1>小林 蒼太</h1>
+  <h1>小林走太</h1>
   <div class="en">Souta Kobayashi — Finance × Data Engineering</div>
   <p class="lead">
-    金融の現場で働くエンジニアです。武器は<strong>統計的検証の規律</strong>と
-    <strong>業務自動化</strong>。「うまくいった話」よりも、
-    <strong>間違いを自分で見つけて棄却できる仕組み</strong>を大切にしています。
+    金融機関の現場で働くエンジニアです。仕事では業務の自動化を、
+    個人ではトレーディング戦略の統計検証をやっています。
+    うまくいった話よりも、間違いを自分で見つけて捨てられる仕組みを大事にしています。
   </p>
   <nav class="links">
     <a href="https://github.com/soutakobayashi1007">GitHub</a>
-    <a href="https://zenn.dev/soutakobayashi">Zenn（技術記事）</a>
+    <a href="https://zenn.dev/sotakobayashi">Zenn（技術記事）</a>
     <a href="#" title="準備中">note（準備中）</a>
   </nav>
 </header>
 
 <section class="nums" aria-label="数字で見る">
-  <div><b>11年 × 25億</b><span>検証に使う金融ティックデータ（18銘柄）</span></div>
-  <div><b>40+ 仮説</b><span>事前登録して統計検定した仮説の数</span></div>
-  <div><b>95% 棄却</b><span>自分のアイデアを自分で不合格にした割合</span></div>
-  <div><b>24時間</b><span>Linuxサーバーで動く自作システムの運用</span></div>
+  <div><b>11年 × 25億</b><span>検証に使っている価格データ（18銘柄のティック）</span></div>
+  <div><b>40本</b><span>これまでに統計検定した仮説</span></div>
+  <div><b>95%</b><span>そのうち自分で棄却した割合</span></div>
+  <div><b>24時間</b><span>自作システムのサーバー稼働</span></div>
 </section>
 
 <section>
-  <h2>プロジェクトカタログ</h2>
-  <p class="sec-note">
-    「何を解決するか」→「どう作ったか」の順で書いています。技術タグは読み飛ばして大丈夫です。
-  </p>
+  <h2>作ったもの</h2>
+  <p class="sec-note">各項目、先に内容、あとに技術の順で書いています。</p>
   <div class="filters" id="filters">
     <button data-f="all" class="on">すべて</button>
     <button data-f="fin">金融・投資</button>
@@ -107,11 +105,11 @@
     <article class="card" data-tags="fin method">
       <span class="badge b-flag">主力プロジェクト</span>
       <h3>統計的トレーディング研究基盤</h3>
-      <p class="what">「そのアイデアは本物か、偶然か」を判定する個人研究基盤。
-        思いつきを検定にかけ、40超の仮説のうち95%を棄却してきました。
-        生き残った戦略だけをLinuxサーバーで24時間自動運用しています。</p>
-      <p class="how">仮説の事前登録 → 順列検定（2,000回）→ 多重比較補正 → 独立データ検証。
-        測定プログラム自体の故障を検出する「較正ゲート」を全検定に装備。</p>
+      <p class="what">トレードのアイデアが本物なのか偶然なのかを統計的に判定するための、
+        個人の研究基盤です。これまで40本ほどの仮説を検定して、95%を棄却しました。
+        残った戦略だけをLinuxサーバーで自動運用しています。</p>
+      <p class="how">仮説の事前登録、順列検定、多重比較補正、独立データでの確認という流れ。
+        検定プログラム自体の故障を検出する仕組み（較正ゲート）も入れています。</p>
       <div class="out">
         <a href="#">→ 方法論の解説記事</a>
         <a href="#">→ 汎用化したコード</a>
@@ -122,48 +120,47 @@
     <article class="card" data-tags="method">
       <span class="badge b-soon">コード公開準備中</span>
       <h3>research-discipline — 検証規律ツールキット</h3>
-      <p class="what">上の研究基盤から「規律の部分」だけを切り出した汎用ライブラリ。
-        事前登録テンプレート、較正ゲート、順列検定、データ提供元の規約台帳——
-        <strong>自分を騙さないための仕組み</strong>を誰でも使える形にしたものです。</p>
-      <p class="how">依存最小（numpy のみ）。A/Bテストや機械学習の検証にも流用可能。</p>
+      <p class="what">上の研究基盤から、検証の仕組みの部分だけを切り出したライブラリです。
+        事前登録のテンプレート、較正ゲート、順列検定、データ取得元の規約台帳が入っています。</p>
+      <p class="how">依存はnumpyだけ。A/Bテストや機械学習の評価にも使えます。</p>
       <div class="out"><a href="#">→ リポジトリ</a></div>
       <div class="tags"><span>Python</span><span>OSS</span><span>統計</span></div>
     </article>
 
     <article class="card" data-tags="auto">
-      <h3>データ自動化デモ 3部作</h3>
-      <p class="what">散らかったCSV群を1つの整形済みExcelレポートに/公開Webデータを
-        構造化データセットに/請求書などの書類をAIで構造化JSONに（信頼度と
-        人間レビュー用フラグつき）。実務でよくある3つの面倒を自動化した実演です。</p>
-      <p class="how">英語READMEつきで公開済み。すべて自作のサンプルデータで動作します。</p>
+      <h3>データ自動化のデモ3本</h3>
+      <p class="what">ばらばらのCSVを1つのExcelレポートにまとめるもの、公開Webデータを
+        構造化するもの、請求書などの書類をAIで読み取ってJSONにするもの。
+        実務でよくある面倒を3つ選んで自動化しました。</p>
+      <p class="how">自作のサンプルデータで動きます。READMEは英語です。</p>
       <div class="out"><a href="https://github.com/soutakobayashi1007/spreadsheet-data-automation-portfolio">→ コードと実行例</a></div>
       <div class="tags"><span>Python</span><span>pandas</span><span>AI抽出</span><span>ETL</span></div>
     </article>
 
     <article class="card" data-tags="fin auto">
       <h3>金融機関の現場での業務自動化（職務）</h3>
-      <p class="what">大手銀行のマネー・ローンダリング対策部門で制裁者リスト更新を
-        半自動化。現職では大手消費者金融の保証事業で計数分析のかたわら、
-        PowerShell/VBAの効率化ツールを多数配布——宛先確認ツールは
-        複数部署で日常使用されています。</p>
-      <p class="how">守秘義務のためコードは非公開。取り組みの詳細は面談にて。</p>
+      <p class="what">銀行のAML部門で制裁者リスト更新の半自動化を担当しました。
+        いまは消費者金融の保証事業で計数分析をしながら、PowerShellやVBAの
+        効率化ツールを作って配っています。メール誤送信を防ぐツールは
+        複数の部署で使われるようになりました。</p>
+      <p class="how">守秘義務があるためコードは出せません。詳細は面談で。</p>
       <div class="tags"><span>SAS</span><span>PowerShell</span><span>VBA</span><span>AML</span></div>
     </article>
 
     <article class="card" data-tags="fin">
       <span class="badge b-soon">公開準備中</span>
       <h3>純資産トラッカー</h3>
-      <p class="what">自分の資産・負債・推移を手入力で管理する小さなWebツール。
-        外部ライブラリゼロ（Node標準のみ）で「小さく、正しく、壊れない」を
-        追求した設計練習でもあります。</p>
+      <p class="what">自分の資産と負債を手入力で記録して推移を見る、小さなWebツールです。
+        外部ライブラリを使わずNode標準機能だけで書きました。</p>
       <div class="tags"><span>Node.js</span><span>ゼロ依存</span><span>可視化</span></div>
     </article>
 
     <article class="card" data-tags="auto">
       <span class="badge b-soon">公開準備中</span>
       <h3>フリーランス向け 請求・資金繰りシート</h3>
-      <p class="what">請求書発行・入金管理・収支記録・ダッシュボードを
-        1つのスプレッドシートに。個人事業主時代の自分が欲しかったものを形に。</p>
+      <p class="what">請求書の発行、入金の管理、収支の記録、ダッシュボードを
+        1つのスプレッドシートにまとめたものです。個人事業主だったころに
+        自分が欲しかったものを作りました。</p>
       <div class="tags"><span>スプレッドシート設計</span><span>会計</span></div>
     </article>
 
@@ -193,11 +190,10 @@
 </section>
 
 <section>
-  <h2>いま積んでいるもの</h2>
-  <p>簿記2級 →（次）証券アナリスト（CMA）。並行して、自作トレーディング戦略の
-     第三者検証済みトラックレコードを構築中。</p>
-  <p class="sec-note" style="margin-top:10px">
-    その他の制作: マルチエージェントのゲーム開発基盤、音楽など。</p>
+  <h2>近況</h2>
+  <p>簿記2級を勉強中です。終わったら証券アナリストに進みます。
+     トレーディング戦略のほうは、第三者に検証してもらえる形の運用実績を積んでいるところです。</p>
+  <p class="sec-note" style="margin-top:10px">ほかにゲーム開発や音楽もやっています。</p>
 </section>
 
 <footer>
