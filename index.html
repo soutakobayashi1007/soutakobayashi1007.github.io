@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sota Kobayashi — 検証の規律で作る、金融×データのポートフォリオ</title>
-<meta name="description" content="金融の現場で働くエンジニア。統計的検証の規律と業務自動化。">
+<title>小林走太 — 金融の現場の分析と自動化、検証の規律</title>
+<meta name="description" content="金融機関の現場で分析と業務自動化をしているエンジニア。統計的検証の規律を構築するのが得意です。業務委託の受託可（週10時間〜）。">
 <style>
   :root{
     --bg:#fafaf8; --fg:#1a1a1a; --sub:#5a5a56; --line:#e4e2dc;
@@ -21,27 +21,27 @@
   main{max-width:880px; margin:0 auto; padding:48px 20px 80px}
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  /* hero */
   .hero h1{font-size:1.9rem; letter-spacing:.02em}
   .hero .en{color:var(--sub); font-size:.95rem; margin-top:2px}
-  .hero p.lead{margin-top:14px; max-width:640px}
+  .hero p.lead{margin-top:14px; max-width:660px}
   .links{margin-top:14px; display:flex; gap:16px; flex-wrap:wrap; font-size:.95rem}
-  /* numbers strip */
+  .avail{margin-top:24px; background:var(--card); border:1px solid var(--line);
+         border-left:3px solid var(--accent); border-radius:8px; padding:16px 18px}
+  .avail h2{margin:0 0 6px; font-size:1rem; border:none; padding:0}
+  .avail p{font-size:.93rem}
+  .avail ul{margin:8px 0 0 18px; font-size:.93rem; color:var(--sub)}
+  .avail .note{margin-top:12px; padding-top:10px; border-top:1px solid var(--line);
+               font-size:.82rem; color:var(--sub)}
   .nums{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
         gap:1px; background:var(--line); border:1px solid var(--line);
-        border-radius:10px; overflow:hidden; margin:32px 0 8px}
+        border-radius:10px; overflow:hidden; margin:16px 0 8px}
   .nums div{background:var(--card); padding:14px 16px}
   .nums b{display:block; font-size:1.25rem; color:var(--accent)}
   .nums span{font-size:.8rem; color:var(--sub)}
-  /* sections */
+  .nums-note{font-size:.82rem; color:var(--sub); margin-top:10px}
   h2{margin:48px 0 6px; font-size:1.25rem; border-bottom:1px solid var(--line);
      padding-bottom:8px}
   .sec-note{color:var(--sub); font-size:.9rem; margin-bottom:18px}
-  /* catalog */
-  .filters{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 18px}
-  .filters button{border:1px solid var(--line); background:var(--card); color:var(--sub);
-        padding:4px 12px; border-radius:999px; cursor:pointer; font-size:.85rem}
-  .filters button.on{border-color:var(--accent); color:var(--accent); font-weight:600}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:16px}
   .card{background:var(--card); border:1px solid var(--line); border-radius:12px;
         padding:20px 20px 16px; display:flex; flex-direction:column; gap:8px}
@@ -55,8 +55,6 @@
   .badge{font-size:.7rem; padding:2px 8px; border-radius:4px; width:fit-content;
          letter-spacing:.04em}
   .b-flag{background:color-mix(in srgb,var(--accent) 12%, transparent); color:var(--accent)}
-  .b-soon{background:color-mix(in srgb,var(--accent2) 14%, transparent); color:var(--accent2)}
-  /* career */
   .career{border-left:2px solid var(--line); padding-left:18px; margin-top:16px}
   .career .item{margin-bottom:16px}
   .career .when{font-size:.8rem; color:var(--sub)}
@@ -71,97 +69,86 @@
 
 <header class="hero">
   <h1>小林走太</h1>
-  <div class="en">Sota Kobayashi — Finance × Data Engineering</div>
+  <div class="en">Sota Kobayashi — Finance × Data &amp; Automation</div>
   <p class="lead">
-    金融機関の現場で働くエンジニアです。仕事では業務の自動化を、
+    金融機関の現場でエンジニアをしています。仕事では分析と業務の自動化を、
     個人ではトレーディング戦略の統計検証をやっています。
-    うまくいった話よりも、間違いを自分で見つけて捨てられる仕組みを大事にしています。
+    どちらでも一番時間を使っているのは、作ったものが本当に効いているのかを
+    確かめる部分です。自分の思いつきを自分で捨てられる仕組みがないと、
+    間違ったまま前に進んでしまうので。
   </p>
   <nav class="links">
     <a href="https://github.com/soutakobayashi1007">GitHub</a>
     <a href="https://zenn.dev/sotakobayashi">Zenn（技術記事）</a>
-    <a href="#" title="準備中">note（準備中）</a>
   </nav>
+
+  <div class="avail">
+    <h2>業務委託のお仕事を受けています</h2>
+    <p>週10時間以上。平日の夜と週末が中心ですが、平日の日中も
+      時間を決めていただければ対応できます。</p>
+    <ul>
+      <li>データの集計・突合・分析・レポート化（Python / SQL / SAS）</li>
+      <li>業務の自動化とツール化（Python / PowerShell / VBA / Google Apps Script）</li>
+      <li>分析や検証が「本当に正しいか」を確かめる仕組みの設計</li>
+      <li>要件のヒアリングから、実装・納品・引き継ぎまで一人で回せます</li>
+    </ul>
+    <p class="note">守秘の扱い: 業務で作ったコードと業務仕様は公開しません。
+      個人の研究も、戦略の中身とデータは非公開にしています。</p>
+  </div>
 </header>
 
-<section class="nums" aria-label="数字で見る">
-  <div><b>11年 × 25億</b><span>検証に使っている価格データ（18銘柄のティック）</span></div>
-  <div><b>40本</b><span>これまでに統計検定した仮説</span></div>
-  <div><b>95%</b><span>そのうち自分で棄却した割合</span></div>
-  <div><b>24時間</b><span>自作システムのサーバー稼働</span></div>
+<section>
+  <h2>個人研究プロジェクトの実績</h2>
+  <p class="sec-note">トレーディング戦略の検証を、仕事とは別に個人でやっています。</p>
+  <div class="nums" aria-label="検証の実績">
+    <div><b>76本</b><span>統計検定にかけた仮説</span></div>
+    <div><b>5本</b><span>事前に決めた判定を通過</span></div>
+    <div><b>0本</b><span>実際に資金を入れてよいかの基準を通過</span></div>
+    <div><b>1本</b><span>実装して稼働中</span></div>
+  </div>
 </section>
 
 <section>
   <h2>作ったもの</h2>
-  <p class="sec-note">各項目、先に内容、あとに技術の順で書いています。</p>
-  <div class="filters" id="filters">
-    <button data-f="all" class="on">すべて</button>
-    <button data-f="fin">金融・投資</button>
-    <button data-f="auto">業務自動化</button>
-    <button data-f="method">検証の方法論</button>
-  </div>
   <div class="grid" id="grid">
 
-    <article class="card" data-tags="fin method">
+    <article class="card">
       <span class="badge b-flag">主力プロジェクト</span>
       <h3>統計的トレーディング研究基盤</h3>
-      <p class="what">トレードのアイデアが本物なのか偶然なのかを統計的に判定するための、
-        個人の研究基盤です。これまで40本ほどの仮説を検定して、95%を棄却しました。
-        残った戦略だけをLinuxサーバーで自動運用しています。</p>
-      <p class="how">仮説の事前登録、順列検定、多重比較補正、独立データでの確認という流れ。
-        検定プログラム自体の故障を検出する仕組み（較正ゲート）も入れています。</p>
+      <p class="what">トレードのアイデアが本物なのか偶然なのかを判定するための、
+        個人の研究基盤です。「統計的に通ったか」と「実際にお金を入れてよいか」を
+        別の工程に分けているのが特徴で、前者を通っても後者で落ちるものが大半でした。
+        いまLinuxサーバーで動かしているのは1本ですが、後者の基準はまだ満たしていないので、
+        資金は入れずに記録だけを積んでいます。</p>
+      <p class="how">仮説を先に文書で固定し、順列検定と多重比較補正をかけ、
+        未閲覧のデータで判定します。検定プログラム自体の故障を検出する仕組み
+        （較正ゲート）が、実際に3回バグを止めました。</p>
       <div class="out">
-        <a href="#">→ 方法論の解説記事</a>
-        <a href="#">→ 汎用化したコード</a>
+        <a href="https://github.com/soutakobayashi1007/research-discipline">→ 汎用化したコード</a>
       </div>
       <div class="tags"><span>Python</span><span>統計検定</span><span>Linux運用</span><span>イベントソーシング</span></div>
     </article>
 
-    <article class="card" data-tags="method">
-      <span class="badge b-soon">コード公開準備中</span>
-      <h3>research-discipline — 検証規律ツールキット</h3>
-      <p class="what">上の研究基盤から、検証の仕組みの部分だけを切り出したライブラリです。
-        事前登録のテンプレート、較正ゲート、順列検定、データ取得元の規約台帳が入っています。</p>
-      <p class="how">依存はnumpyだけ。A/Bテストや機械学習の評価にも使えます。</p>
-      <div class="out"><a href="#">→ リポジトリ</a></div>
-      <div class="tags"><span>Python</span><span>OSS</span><span>統計</span></div>
-    </article>
-
-    <article class="card" data-tags="auto">
-      <h3>データ自動化のデモ3本</h3>
-      <p class="what">ばらばらのCSVを1つのExcelレポートにまとめるもの、公開Webデータを
-        構造化するもの、請求書などの書類をAIで読み取ってJSONにするもの。
-        実務でよくある面倒を3つ選んで自動化しました。</p>
-      <p class="how">自作のサンプルデータで動きます。READMEは英語です。</p>
-      <div class="out"><a href="https://github.com/soutakobayashi1007/spreadsheet-data-automation-portfolio">→ コードと実行例</a></div>
-      <div class="tags"><span>Python</span><span>pandas</span><span>AI抽出</span><span>ETL</span></div>
-    </article>
-
-    <article class="card" data-tags="fin auto">
+    <article class="card">
       <h3>金融機関の現場での業務自動化（職務）</h3>
-      <p class="what">銀行のAML部門で制裁者リスト更新の半自動化を担当しました。
-        いまは消費者金融の保証事業で計数分析をしながら、PowerShellやVBAの
-        効率化ツールを作って配っています。メール誤送信を防ぐツールは
-        複数の部署で使われるようになりました。</p>
-      <p class="how">守秘義務があるためコードは出せません。詳細は面談で。</p>
-      <div class="tags"><span>SAS</span><span>PowerShell</span><span>VBA</span><span>AML</span></div>
+      <p class="what">作った業務ツールのいくつかは、所属部署の外でも使われています。
+        仕事は、規制対応で毎日発生していた照合作業の半自動化、与信の計数分析、
+        その周辺の効率化ツールの作成です。</p>
+      <p class="how">守秘義務があるためコードと業務の詳細は出せません。
+        できることの説明は面談で。</p>
+      <div class="tags"><span>SAS</span><span>PowerShell</span><span>VBA</span><span>SQL</span></div>
     </article>
 
-    <article class="card" data-tags="fin">
-      <span class="badge b-soon">公開準備中</span>
-      <h3>純資産トラッカー</h3>
-      <p class="what">自分の資産と負債を手入力で記録して推移を見る、小さなWebツールです。
-        外部ライブラリを使わずNode標準機能だけで書きました。</p>
-      <div class="tags"><span>Node.js</span><span>ゼロ依存</span><span>可視化</span></div>
-    </article>
-
-    <article class="card" data-tags="auto">
-      <span class="badge b-soon">公開準備中</span>
-      <h3>フリーランス向け 請求・資金繰りシート</h3>
-      <p class="what">請求書の発行、入金の管理、収支の記録、ダッシュボードを
-        1つのスプレッドシートにまとめたものです。個人事業主だったころに
-        自分が欲しかったものを作りました。</p>
-      <div class="tags"><span>スプレッドシート設計</span><span>会計</span></div>
+    <article class="card">
+      <h3>research-discipline — 検証規律ツールキット</h3>
+      <p class="what">「その分析結果は偶然ではないのか」を確かめるための道具をまとめた
+        ライブラリです。研究基盤から検証の仕組みだけを切り出しました。
+        A/Bテストの判定や、機械学習モデルの評価にもそのまま使えます。</p>
+      <p class="how">中身は、仮説を先に固定するテンプレート、順列検定、多重比較補正、
+        検定プログラム自体の故障を検出する較正ゲート、データ取得元の規約台帳。
+        依存はnumpyだけです。</p>
+      <div class="out"><a href="https://github.com/soutakobayashi1007/research-discipline">→ リポジトリ</a></div>
+      <div class="tags"><span>Python</span><span>OSS</span><span>統計</span></div>
     </article>
 
   </div>
@@ -173,43 +160,37 @@
     <div class="item">
       <div class="when">2025年11月 —</div>
       <div class="role">ITエンジニア（金融機関常駐）</div>
-      <div class="desc">大手銀行AML部門の制裁リスト半自動化（初案件でビジネスサイド兼務）→
-        現在は大手消費者金融の保証事業で計数分析・業務自動化。</div>
+      <div class="desc">規制対応部門を経て、現在は与信領域。初案件からビジネスサイドを
+        兼務しており、要件の汲み取りと組み立てが得意です。</div>
     </div>
     <div class="item">
       <div class="when">2025年2月 — 2025年11月</div>
       <div class="role">個人事業主（業務自動化ツール開発）</div>
-      <div class="desc">EC事業者向けの自動化ツールを単独で要件定義から納品まで。</div>
+      <div class="desc">小売・EC事業者の業務自動化を受託。要件のヒアリングから実装、
+        納品、引き継ぎまで単独で担当していました。</div>
     </div>
     <div class="item">
       <div class="when">— 2024年</div>
       <div class="role">Universitat Politècnica de València（スペイン）機械工学専攻</div>
-      <div class="desc">3年次まで修了（在籍中・復学権あり）。スペイン語は生活・学業レベル。</div>
+      <div class="desc">機械工学を3年次まで修了。18歳で渡西し、4年弱スペイン語で
+        生活していました。技術文書と実務のやりとりであれば、いまも問題なく使えます。</div>
     </div>
   </div>
 </section>
 
 <section>
   <h2>近況</h2>
-  <p>簿記2級を勉強中です。終わったら証券アナリストに進みます。
-     トレーディング戦略のほうは、第三者に検証してもらえる形の運用実績を積んでいるところです。</p>
-  <p class="sec-note" style="margin-top:10px">ほかにゲーム開発や音楽もやっています。</p>
+  <p>簿記2級を勉強中です。会計の用語で会話できるほうが、経理や請求まわりの
+     自動化では話が早いので。個人の研究は、為替から株式へ対象を広げているところで、
+     検証の道具がそのまま持っていけるかを試しています。</p>
+  <p class="sec-note" style="margin-top:10px">ゲーム開発と音楽もやっています。
+     どちらも長く続けているもので、仕事の受注状況とは切り離しています。</p>
 </section>
 
 <footer>
-  © 2026 Sota Kobayashi ·
-  掲載内容に守秘義務対象の情報は含まれません。研究プロジェクトの戦略詳細・データは非公開です。
+  © 2026 Sota Kobayashi
 </footer>
 
 </main>
-<script>
-  const btns=[...document.querySelectorAll('#filters button')];
-  const cards=[...document.querySelectorAll('#grid .card')];
-  btns.forEach(b=>b.addEventListener('click',()=>{
-    btns.forEach(x=>x.classList.toggle('on',x===b));
-    const f=b.dataset.f;
-    cards.forEach(c=>{c.style.display=(f==='all'||c.dataset.tags.split(' ').includes(f))?'':'none'});
-  }));
-</script>
 </body>
 </html>
